@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <template id="cat-list-template">
+        {{#user}}
+        <li id="cat-list">
+            {{#if isShow}}
+            <span>{{id}}. | </span>
+            <span>{{createdAt}} | </span>
+            {{/if}}
+            <span>{{name}} | </span>
+            <img src={{avatar}} alt="avatar">
+        </li>
+        {{/user}}
+    </template>
+    <button id="btn">Show More ...</button>
+    <ul id="e">
+    </ul>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script type="module" src="./index.js"></script>
+</body>
+</html>
